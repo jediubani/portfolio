@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+}
+.wallpaper {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4));
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.navlinks {
+    flex: 1;
+    text-align: right;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 10px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 5px;
+    color: white;
+}
+
+.menu-button {
+    background-color: transparent;
+    color: white;
+    padding: 5 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    list-style: none;
+}
+
+.right-menu {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-menu {
+    margin-right: 10px;
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    /* note float makes it to float in that direction remove the float  */
+    float: left;
+    color: black;
+    padding: 4px 4px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown-menu a:hover {
+    color: white;
+}
+
+.right-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.right-menu:hover .menu-button {
+    background-color: transparent;
+}
+
+/* write up section */
+.hero{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    position: relative;
+}
+img{
+    width: 150px;
+    position: absolute;
+    box-shadow: 5px 5px 20px rgb(97, 69, 69);
+}
+
+.hero-bt{
+    width: 70%;
+    float: right;
+    margin-left: 200px;
+}
+
+@media (max-width: 780px){
+    .hero{
+        margin-top: 25px;
+    }
+    img {
+        margin-left: -25px;
+    }
+    
+    .hero-bt {
+        width: 60%;
+        margin-left: 140px;
+        padding-right: 10px;
+    }
+    .dropdown-menu a{
+        font-size: 17px;
+    }
+}
